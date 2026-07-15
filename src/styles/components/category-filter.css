@@ -1,0 +1,51 @@
+/* ==========================================
+   CATEGORY FILTER
+========================================== */
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: .5rem;
+
+  width: fit-content;
+
+  margin: 0 auto 4rem;
+
+  padding: .5rem;
+
+  background: #ffffff;
+
+  border-radius: 999px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+}
+
+.category-filter__button {
+  padding: .8rem 1.5rem;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-size: .95rem;
+
+  font-weight: 600;
+
+  transition: all .3s ease;
+}
+
+.category-filter__button:hover {
+  background: #f5f2ed;
+}
+
+.category-filter__button--active {
+  background: var(--color-primary);
+  color: white;
+}

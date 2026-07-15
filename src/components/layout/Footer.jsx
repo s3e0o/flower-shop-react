@@ -6,7 +6,7 @@ export default function Footer() {
       <Container>
         <div className="footer-content">
           <div className="footer-brand">
-            <h2>KP PATLAT</h2>
+            <h2>PATLAT ALKUWAIT</h2>
 
             <p className="footer-tagline">
               Floral Boutique
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          © {new Date().getFullYear()} KP Patlat Floral Boutique.
+          © {new Date().getFullYear()} Patlat AlKuwait Floral Boutique.
           All rights reserved.
         </div>
       </Container>

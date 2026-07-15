@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 
 import Home from "./pages/Home";
-import Flowers from "./pages/Collections";
+import Flowers from "./pages/Flowers";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";

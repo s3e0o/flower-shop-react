@@ -16,7 +16,12 @@ import "./styles/components/button.css";
 import "./styles/components/collection-card.css";
 import "./styles/components/section-title.css";
 import "./styles/components/service-card.css";
+import "./styles/components/flower-card.css";
+import "./styles/components/flower-modal.css";
+import "./styles/components/category-filter.css";
+import "./styles/components/editorial-section.css";
 
+import "./styles/pages/flowers.css";
 import "./styles/pages/home.css";
 
 createRoot(document.getElementById("root")).render(
