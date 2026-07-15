@@ -1,0 +1,72 @@
+/* ==========================================
+   ROOT
+========================================== */
+
+#root{
+    min-height:100vh;
+}
+
+.site-wrapper{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+main{
+    flex:1;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:min(
+        calc(100% - 48px),
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.section{
+
+    padding-block:var(--section-spacing);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .container{
+
+        width:min(
+            calc(100% - 40px),
+            var(--container-width)
+        );
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+
+        width:min(
+            calc(100% - 32px),
+            var(--container-width)
+        );
+
+    }
+
+}

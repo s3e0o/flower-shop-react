@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  --color-background: #faf8f5;
+  --color-surface: #ffffff;
+
+  --color-text: #232323;
+  --color-text-light: #666666;
+
+  --color-border: #e8e4de;
+
+  --color-primary: #111111;
+  --color-primary-hover: #2c2c2c;
+
+  --color-accent: #7d8a72;
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Container */
+  --container-width: 1200px;
+  --container-padding: 24px;
+
+  /* Spacing */
+  --section-spacing: 96px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  /* Shadow */
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  /* Transition */
+  --transition: 0.3s ease;
+
+  /* Header */
+
+    --header-height:88px;
+
+    /* Max Widths */
+
+    --container-width:1200px;
+
+    /* Section */
+
+    --section-spacing:6rem;
+}
+
