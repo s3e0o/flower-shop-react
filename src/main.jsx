@@ -24,6 +24,8 @@ import "./styles/components/process-section.css";
 import "./styles/components/gallery-filter.css";
 import "./styles/components/gallery-item.css";
 import "./styles/components/gallery-lightbox.css";
+import "./styles/components/why-choose-us.css";
+import "./styles/components/mission-vision.css";
 
 import "./styles/pages/about.css";
 import "./styles/pages/gallery.css";

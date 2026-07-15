@@ -29,9 +29,13 @@ export default function EditorialSection({
 
         <h2>{title}</h2>
 
-        <p className="editorial-section__description">
-          {description}
-        </p>
+        <div className="editorial-section__description">
+          {description.split("\n\n").map((paragraph) => (
+            <p key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
 
         {highlights.length > 0 && (
           <ul className="editorial-section__highlights">

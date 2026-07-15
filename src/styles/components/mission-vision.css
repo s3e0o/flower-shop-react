@@ -1,0 +1,51 @@
+/* ==========================================
+   MISSION & VISION
+========================================== */
+
+.mission-vision {
+  background: var(--color-background);
+}
+
+.mission-card {
+  max-width: 900px;
+
+  margin: 0 auto 6rem;
+
+  text-align: center;
+}
+
+.mission-card:last-child {
+  margin-bottom: 0;
+}
+
+.mission-card__eyebrow {
+  margin-bottom: 1rem;
+
+  color: var(--color-accent);
+
+  font-size: .85rem;
+
+  font-weight: 700;
+
+  letter-spacing: .25em;
+
+  text-transform: uppercase;
+}
+
+.mission-card h2 {
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(2.5rem,5vw,4rem);
+
+  line-height: 1.15;
+}
+
+.mission-card p {
+  max-width: 720px;
+
+  margin: auto;
+
+  line-height: 1.9;
+
+  color: var(--color-text-light);
+}
