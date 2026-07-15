@@ -63,8 +63,18 @@
 
 .editorial-section__description {
   margin-bottom: 2rem;
+}
+
+.editorial-section__description p {
+  margin-bottom: 1.25rem;
 
   line-height: 1.9;
+
+  color: var(--color-text-light);
+}
+
+.editorial-section__description p:last-child {
+  margin-bottom: 0;
 }
 
 .editorial-section__highlights {

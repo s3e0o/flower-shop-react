@@ -1,0 +1,156 @@
+/* ==========================================
+   GALLERY LIGHTBOX
+========================================== */
+
+.gallery-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,.82);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 5000;
+
+  animation: fadeOverlay .3s ease;
+}
+
+.gallery-lightbox {
+  position: relative;
+
+  width: min(1200px,95vw);
+
+  animation: modalPop .35s ease;
+}
+
+.gallery-lightbox img {
+  width: 100%;
+  max-height: 85vh;
+
+  object-fit: contain;
+
+  border-radius: 20px;
+}
+
+.gallery-lightbox__caption {
+  margin-top: 1.5rem;
+
+  color: white;
+
+  text-align: center;
+}
+
+.gallery-lightbox__caption span {
+  display: block;
+
+  margin-bottom: .5rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .15em;
+
+  opacity: .75;
+}
+
+.gallery-lightbox__caption h3 {
+  color: white;
+}
+
+.gallery-lightbox__close {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background .3s ease,
+    transform .3s ease;
+
+  z-index: 20;
+}
+
+.gallery-lightbox__close:hover {
+  background: rgba(255,255,255,.28);
+
+  transform: rotate(90deg);
+}
+
+.gallery-lightbox__nav {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 54px;
+  height: 54px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: rgba(255,255,255,.15);
+
+  backdrop-filter: blur(8px);
+
+  color: white;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.gallery-lightbox__nav:hover {
+  background: rgba(255,255,255,.3);
+}
+
+.gallery-lightbox__nav--left {
+  left: 20px;
+}
+
+.gallery-lightbox__nav--right {
+  right: 20px;
+}
+
+@keyframes fadeOverlay {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@keyframes modalPop {
+  from {
+    opacity:0;
+    transform:translateY(20px) scale(.97);
+  }
+
+  to {
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}

@@ -21,7 +21,12 @@ import "./styles/components/flower-modal.css";
 import "./styles/components/category-filter.css";
 import "./styles/components/editorial-section.css";
 import "./styles/components/process-section.css";
+import "./styles/components/gallery-filter.css";
+import "./styles/components/gallery-item.css";
+import "./styles/components/gallery-lightbox.css";
 
+import "./styles/pages/about.css";
+import "./styles/pages/gallery.css";
 import "./styles/pages/flowers.css";
 import "./styles/pages/home.css";
 

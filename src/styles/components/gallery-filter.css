@@ -1,0 +1,40 @@
+/* ==========================================
+   GALLERY FILTER
+========================================== */
+
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: .75rem;
+
+  margin: 4rem 0;
+}
+
+.gallery-filter__button {
+  padding: .85rem 1.5rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: all .3s ease;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-filter__button:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-filter__button--active {
+  background: var(--color-primary);
+  color: white;
+}
