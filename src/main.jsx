@@ -20,6 +20,7 @@ import "./styles/components/flower-card.css";
 import "./styles/components/flower-modal.css";
 import "./styles/components/category-filter.css";
 import "./styles/components/editorial-section.css";
+import "./styles/components/process-section.css";
 
 import "./styles/pages/flowers.css";
 import "./styles/pages/home.css";

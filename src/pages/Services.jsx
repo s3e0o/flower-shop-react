@@ -1,6 +1,7 @@
 import Container from "../components/ui/Container";
 import SectionTitle from "../components/ui/SectionTitle";
 import EditorialSection from "../components/ui/EditorialSection";
+import ProcessSection from "../components/services/ProcessSection";
 
 import servicesPage from "../data/servicesPage";
 
@@ -30,6 +31,7 @@ export default function Services() {
             />
           ))}
 
+          <ProcessSection />
         </Container>
       </section>
     </>

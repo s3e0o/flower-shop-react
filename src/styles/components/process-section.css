@@ -1,0 +1,61 @@
+/* ==========================================
+   PROCESS SECTION
+========================================== */
+
+.process-section {
+  background: var(--color-background);
+}
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2rem;
+}
+
+.process-card {
+  position: relative;
+
+  padding: 2.5rem;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.process-number {
+  display: inline-block;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 3rem;
+
+  font-family: var(--font-heading);
+
+  color: rgba(0,0,0,.08);
+
+  font-weight: 700;
+}
+
+.process-card h3 {
+  margin-bottom: 1rem;
+}
+
+.process-card p {
+  line-height: 1.8;
+
+  color: var(--color-text-light);
+}
