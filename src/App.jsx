@@ -12,7 +12,7 @@ import Flowers from "./pages/Flowers";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
-import Visit from "./pages/Visit";
+import Location from "./pages/Location";
 import Reservation from "./pages/Reservation";
 import NotFound from "./pages/NotFound";
 
@@ -31,7 +31,7 @@ export default function App() {
 
                 <Route path="/about" element={<About />} />
 
-                <Route path="/visit" element={<Visit />} />
+                <Route path="/visit" element={<Location />} />
 
                 <Route path="/reservation" element={<Reservation />} />
 

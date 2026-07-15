@@ -26,7 +26,11 @@ import "./styles/components/gallery-item.css";
 import "./styles/components/gallery-lightbox.css";
 import "./styles/components/why-choose-us.css";
 import "./styles/components/mission-vision.css";
+import "./styles/components/contact-section.css";
+import "./styles/components/reservation-summary.css";
+import "./styles/components/reservation-form.css";
 
+import "./styles/pages/location.css";
 import "./styles/pages/about.css";
 import "./styles/pages/gallery.css";
 import "./styles/pages/flowers.css";

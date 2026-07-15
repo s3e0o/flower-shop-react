@@ -3,106 +3,100 @@
 ========================================== */
 
 .site-footer {
-  margin-top: 6rem;
+  margin-top: 8rem;
 
-  background: var(--color-surface);
+  padding: 5rem 0 2rem;
+
+  background: #f8f5f2;
 
   border-top: 1px solid var(--color-border);
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.footer-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 
   gap: 4rem;
-
-  padding: 5rem 0;
 }
 
-.footer-brand {
-  max-width: 420px;
-}
-
-.footer-brand h2 {
-  margin-bottom: .5rem;
+.footer-logo {
+  margin-bottom: 1rem;
 
   font-size: 2rem;
-
-  letter-spacing: .08em;
-}
-
-.footer-tagline {
-  margin-bottom: 1.25rem;
-
-  text-transform: uppercase;
-
-  letter-spacing: .25em;
-
-  font-size: .8rem;
 }
 
 .footer-description {
-  line-height: 1.8;
+  max-width: 320px;
+
+  line-height: 1.9;
+
+  color: var(--color-text-light);
 }
 
-.footer-contact {
+.footer-grid h4 {
+  margin-bottom: 1.25rem;
+}
+
+.footer-grid ul {
   display: flex;
+
   flex-direction: column;
 
-  gap: 1rem;
+  gap: .8rem;
 }
 
-.footer-contact a {
-  transition: color var(--transition);
+.footer-grid a {
+  transition: color .3s ease;
 }
 
-.footer-contact a:hover {
+.footer-grid a:hover {
   color: var(--color-accent);
 }
 
+.footer-socials {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: all .3s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-md);
+}
+
 .footer-bottom {
-  padding: 1.5rem 0;
+  margin-top: 5rem;
+
+  padding-top: 2rem;
+
+  display: flex;
+
+  justify-content: space-between;
 
   border-top: 1px solid var(--color-border);
-
-  text-align: center;
 
   color: var(--color-text-light);
 
   font-size: .9rem;
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media(max-width:768px){
-
-.footer-content{
-
-flex-direction:column;
-
-gap:3rem;
-
-}
-
-.footer-contact{
-
-align-items:flex-start;
-
-}
-
-.footer-brand h2{
-
-font-size:1.75rem;
-
-}
-
-.footer-bottom{
-
-text-align:left;
-
-}
-
 }

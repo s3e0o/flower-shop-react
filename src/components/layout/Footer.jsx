@@ -1,36 +1,125 @@
+import { NavLink } from "react-router-dom";
+
+import {
+  FiFacebook,
+  FiInstagram,
+} from "react-icons/fi";
+
+import { FaWhatsapp } from "react-icons/fa";
+
 import Container from "../ui/Container";
+
+import footer from "../../data/footer";
 
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <Container>
-        <div className="footer-content">
-          <div className="footer-brand">
-            <h2>PATLAT ALKUWAIT</h2>
 
-            <p className="footer-tagline">
-              Floral Boutique
-            </p>
+      <Container>
+
+        <div className="footer-grid">
+
+          <div>
+
+            <h2 className="footer-logo">
+              {footer.brand.name}
+            </h2>
 
             <p className="footer-description">
-              Flowers thoughtfully arranged for life's
-              most meaningful celebrations.
+              {footer.brand.description}
             </p>
+
           </div>
 
-          <div className="footer-contact">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Call Us</a>
-            <a href="/visit">Visit Us</a>
+          <div>
+
+            <h4>Explore</h4>
+
+            <ul>
+
+              {footer.links.map((link) => (
+
+                <li key={link.label}>
+
+                  <NavLink to={link.to}>
+                    {link.label}
+                  </NavLink>
+
+                </li>
+
+              ))}
+
+            </ul>
+
           </div>
+
+          <div>
+
+            <h4>Contact</h4>
+
+            <p>{footer.contact.address}</p>
+
+            <p>{footer.contact.phone}</p>
+
+            <p>{footer.contact.email}</p>
+
+          </div>
+
+          <div>
+
+            <h4>Follow Us</h4>
+
+            <div className="footer-socials">
+
+              <a
+                href={footer.social.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp />
+              </a>
+
+              <a
+                href={footer.social.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <FiFacebook />
+              </a>
+
+              <a
+                href={footer.social.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <FiInstagram />
+              </a>
+
+
+
+            </div>
+
+          </div>
+
         </div>
 
         <div className="footer-bottom">
-          © {new Date().getFullYear()} Patlat AlKuwait Floral Boutique.
-          All rights reserved.
+
+          <p>
+            {footer.copyright}
+          </p>
+
+          <p>
+            {footer.developer}
+          </p>
+
         </div>
+
       </Container>
+
     </footer>
   );
 }
