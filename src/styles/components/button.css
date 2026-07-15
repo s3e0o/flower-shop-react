@@ -41,3 +41,51 @@
   }
 
 }
+
+/* ==========================================
+   BUTTON ICON
+========================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: .75rem;
+}
+
+.btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+   BUTTON LOADING
+========================================== */
+
+.btn__spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid rgba(255,255,255,.35);
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: btn-spin .7s linear infinite;
+}
+
+@keyframes btn-spin {
+
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}

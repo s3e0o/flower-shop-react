@@ -1,0 +1,79 @@
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact-section__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.contact-section__map iframe {
+  width: 100%;
+  height: 600px;
+
+  border: none;
+  border-radius: 24px;
+
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-section__content h2 {
+  margin-bottom: 2rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+
+  margin-bottom: 1.75rem;
+}
+
+.contact-item svg {
+  margin-top: .25rem;
+
+  color: var(--color-accent);
+
+  font-size: 1.2rem;
+
+  flex-shrink: 0;
+}
+
+.contact-item p,
+.contact-item span {
+  line-height: 1.8;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 1rem;
+
+  margin: 2rem 0;
+}
+
+.contact-socials a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: all .3s ease;
+}
+
+.contact-socials a:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-md);
+}
