@@ -72,10 +72,9 @@ export default function Footer() {
             <div className="footer-socials">
 
               <a
-                href={footer.social.whatsapp}
+                href={`https://wa.me/${footer.social.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp"
               >
                 <FaWhatsapp />
               </a>

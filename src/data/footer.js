@@ -6,6 +6,7 @@ const footer = {
       "Flowers crafted with passion for life's most meaningful celebrations.",
   },
 
+  
   links: [
     {
       label: "Home",
@@ -62,7 +63,7 @@ const footer = {
       "https://instagram.com",
 
     whatsapp: 
-      "https://wa.me/639123456789",
+      "639123456789",
   },
 
   copyright:
