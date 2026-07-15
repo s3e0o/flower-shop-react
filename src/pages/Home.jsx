@@ -1,26 +1,9 @@
-import Container from "../components/ui/Container";
-import Button from "../components/ui/Button";
+import Hero from "../components/home/sections/Hero";
 
 export default function Home() {
   return (
-    <section className="section">
-      <Container>
-
-        <h1>KP Patlat</h1>
-
-        <p
-          style={{
-            margin: "1rem 0 2rem",
-          }}
-        >
-          Luxury Floral Boutique
-        </p>
-
-        <Button to="/flowers">
-          Explore Collection
-        </Button>
-
-      </Container>
-    </section>
+    <>
+      <Hero />
+    </>
   );
 }

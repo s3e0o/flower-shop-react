@@ -1,14 +1,22 @@
 const hero = {
-  eyebrow: "KP PATLAT FLORAL BOUTIQUE",
+  eyebrow: "KP Patlat Floral Boutique",
 
-  title: "Elegant Flowers For Every Occasion",
+  title: "Flowers That Speak From the Heart",
 
   description:
-    "Thoughtfully crafted floral arrangements for weddings, celebrations, and life's most meaningful moments.",
+    "Beautiful handcrafted floral arrangements for weddings, birthdays, anniversaries, and life's most meaningful celebrations.",
 
-  primaryButton: "Explore Collection",
+  primaryAction: {
+    label: "Explore Collection",
+    to: "/flowers",
+  },
 
-  secondaryButton: "Reserve Now",
+  secondaryAction: {
+    label: "Reserve Now",
+    to: "/reservation",
+  },
+
+  imageAlt: "Elegant handcrafted floral arrangement by KP Patlat",
 };
 
 export default hero;
