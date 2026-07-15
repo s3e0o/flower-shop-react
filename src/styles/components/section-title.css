@@ -1,0 +1,50 @@
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+.section-title--center {
+  text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-title__eyebrow {
+  margin-bottom: 1rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section-title__heading {
+  margin-bottom: 1.25rem;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  line-height: 1.1;
+}
+
+.section-title__description {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+.section-title--left .section-title__description {
+  margin: 0;
+}

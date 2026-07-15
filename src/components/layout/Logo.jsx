@@ -6,7 +6,7 @@ export default function Logo() {
 
       <div className="logo-text">
 
-        <h1>KP PATLAT</h1>
+        <h1>PATLAT ALKUWAIT</h1>
 
         <span>Floral Boutique</span>
 

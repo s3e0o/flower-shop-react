@@ -13,6 +13,9 @@ import "./styles/layout/navbar.css";
 import "./styles/layout/footer.css";
 
 import "./styles/components/button.css";
+import "./styles/components/collection-card.css";
+import "./styles/components/section-title.css";
+import "./styles/components/service-card.css";
 
 import "./styles/pages/home.css";
 

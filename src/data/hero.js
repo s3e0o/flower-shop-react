@@ -1,5 +1,5 @@
 const hero = {
-  eyebrow: "KP Patlat Floral Boutique",
+  eyebrow: "Patlat AlKuwait Floral Boutique",
 
   title: "Flowers That Speak From the Heart",
 

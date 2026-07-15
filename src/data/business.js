@@ -1,19 +1,26 @@
 const business = {
+  name: "Patlat AlKuwait Floral Boutique",
 
-    name: "KP Patlat",
+  address:
+    "Kuwait City, Kuwait",
 
-    tagline: "Floral Boutique",
+  phone:
+    "+63 XXX XXX XXXX",
 
-    phone: "",
+  email:
+    "patlatalkuwait@email.com",
 
-    email: "",
+  hours:
+    "Monday - Sunday • 8:00 AM - 6:00 PM",
 
-    facebook: "",
+  facebook:
+    "#",
 
-    instagram: "",
+  instagram:
+    "#",
 
-    address: ""
-
+  googleMaps:
+    "https://maps.google.com",
 };
 
 export default business;
