@@ -3,12 +3,12 @@ import { useState } from "react";
 import Hero from "../components/home/sections/Hero";
 import LatestDesigns from "../components/home/sections/LatestDesigns";
 import FeaturedCollection from "../components/home/sections/FeaturedCollection";
+import OffersSection from "../components/home/sections/OffersSection";
 import ServicesPreview from "../components/home/sections/ServicesPreview";
 import AboutPreview from "../components/home/sections/AboutPreview";
 import GalleryPreview from "../components/home/sections/GalleryPreview";
 import VisitPreview from "../components/home/sections/VisitPreview";
 import CTA from "../components/home/sections/CTA";
-import OffersSection from "../components/home/sections/OffersSection";
 
 import FlowerModal from "../components/flowers/FlowerModal";
 
@@ -19,13 +19,9 @@ export default function Home() {
     <>
       <Hero />
 
-      <LatestDesigns
-        onView={setSelectedFlower}
-      />
+      <LatestDesigns onView={setSelectedFlower} />
 
-      <FeaturedCollection
-        onView={setSelectedFlower}
-      />
+      <FeaturedCollection />
 
       <OffersSection />
 
