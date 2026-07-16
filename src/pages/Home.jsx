@@ -8,6 +8,7 @@ import AboutPreview from "../components/home/sections/AboutPreview";
 import GalleryPreview from "../components/home/sections/GalleryPreview";
 import VisitPreview from "../components/home/sections/VisitPreview";
 import CTA from "../components/home/sections/CTA";
+import OffersSection from "../components/home/sections/OffersSection";
 
 import FlowerModal from "../components/flowers/FlowerModal";
 
@@ -25,6 +26,8 @@ export default function Home() {
       <FeaturedCollection
         onView={setSelectedFlower}
       />
+
+      <OffersSection />
 
       <ServicesPreview />
 

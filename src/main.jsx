@@ -29,6 +29,7 @@ import "./styles/components/mission-vision.css";
 import "./styles/components/contact-section.css";
 import "./styles/components/reservation-summary.css";
 import "./styles/components/reservation-form.css";
+import "./styles/components/offers.css";
 
 import "./styles/pages/location.css";
 import "./styles/pages/about.css";
