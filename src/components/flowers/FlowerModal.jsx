@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import Button from "../ui/Button";
 
 export default function FlowerModal({
@@ -10,7 +9,6 @@ export default function FlowerModal({
     if (!flower) return;
 
     const previousOverflow = document.body.style.overflow;
-
     document.body.style.overflow = "hidden";
 
     return () => {
@@ -26,7 +24,6 @@ export default function FlowerModal({
     }
 
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -52,14 +49,18 @@ export default function FlowerModal({
         </button>
 
         <div className="flower-modal__grid">
+          
+          {/* Image Section */}
+          <div className="flower-modal__image-wrapper">
+            <img
+              src={flower.image}
+              alt={flower.name}
+              loading="lazy"
+            />
+          </div>
 
-          <img
-            src={flower.image}
-            alt={flower.name}
-          />
-
+          {/* Content Section */}
           <div className="flower-modal__content">
-
             <span className="flower-card__category">
               {flower.category}
             </span>
@@ -72,18 +73,18 @@ export default function FlowerModal({
               {flower.description}
             </p>
 
-            <h3 className="flower-modal__price">
-              ₱{flower.price.toLocaleString()}
-            </h3>
-
-            <Button to="/reservation">
-              Reserve Arrangement
-            </Button>
-
+            <div className="flower-modal__footer">
+              <h3 className="flower-modal__price">
+                ₱{flower.price.toLocaleString()}
+              </h3>
+              
+              <Button to="/reservation" className="btn-block-mobile">
+                Reserve Arrangement
+              </Button>
+            </div>
           </div>
 
         </div>
-
       </div>
     </div>
   );
