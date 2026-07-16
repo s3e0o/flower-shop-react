@@ -195,99 +195,108 @@
 @media (max-width: 768px) {
 
   .flower-modal-overlay {
-    padding: 0;
-    align-items: flex-end; /* Anchors modal to bottom */
+
+    padding: 1rem;
+
+    align-items: center;
+
   }
 
   .flower-modal {
+
     width: 100%;
-    height: 100vh; /* Full screen height */
-    margin: 0;
-    padding: 0;
-    border-radius: 0; /* Square corners for full screen */
-    
-    /* Change animation to slide up */
-    animation: slideUpMobile .4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    max-width: 420px;
+
+    padding: 1.25rem;
+
+    border-radius: 22px;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
   }
 
   .flower-modal__grid {
+
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr; /* Image auto, content fills rest */
-    height: 100%;
-    gap: 0;
-    overflow-y: auto; /* Allow scrolling inside the modal */
+
+    gap: 1.5rem;
+
   }
 
-  /* Image Section */
   .flower-modal img {
-    height: 45vh; /* Takes up 45% of screen height */
-    width: 100%;
-    border-radius: 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+
+    height: 260px;
+
+    border-radius: 16px;
+
   }
 
-  /* Content Section */
   .flower-modal__content {
-    padding: 1.5rem;
-    background: white;
-    position: relative;
-    z-index: 20;
-    
-    /* Overlap effect: pulls content up over the image slightly */
-    margin-top: -2rem; 
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+
+    padding: 0;
+
   }
 
   .flower-modal__title {
-    margin-top: 0.5rem;
-    font-size: 1.75rem;
+
+    margin-top: .75rem;
+
+    margin-bottom: .75rem;
+
+    font-size: 1.6rem;
+
   }
 
   .flower-modal__description {
-    font-size: 0.95rem;
+
+    font-size: .95rem;
+
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+
+  }
+
+  .flower-modal__footer {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 1rem;
+
+    margin-top: 1.75rem;
+
   }
 
   .flower-modal__price {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+
+    margin: 0;
+
     font-size: 1.5rem;
+
   }
 
-  /* Close Button Adjustment */
+  .flower-modal__footer .btn {
+
+    width: 100%;
+
+  }
+
   .flower-modal__close {
-    top: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
-    
-    /* Darker background so it's visible on any image */
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    backdrop-filter: none;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 1.2rem;
+
   }
 
-  .flower-modal__close:hover {
-    background: rgba(0, 0, 0, 0.6);
-    transform: rotate(90deg);
-  }
-}
-
-/* New Animation for Mobile Slide Up */
-@keyframes slideUpMobile {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
 }
