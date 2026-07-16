@@ -5,6 +5,7 @@ import SectionTitle from "../../ui/SectionTitle";
 
 import FlowerCard from "../../flowers/FlowerCard";
 
+
 export default function LatestDesigns({
     onView,
 }) {
