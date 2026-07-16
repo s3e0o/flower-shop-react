@@ -11,6 +11,7 @@ import "./styles/base/typography.css";
 import "./styles/layout/layout.css";
 import "./styles/layout/navbar.css";
 import "./styles/layout/footer.css";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 import "./styles/components/button.css";
 import "./styles/components/collection-card.css";
@@ -40,6 +41,7 @@ import "./styles/pages/home.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </StrictMode>,
