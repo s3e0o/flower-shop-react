@@ -1,4 +1,6 @@
 .collection-card {
+  cursor: pointer;
+  
   background: white;
 
   overflow: hidden;
@@ -35,4 +37,62 @@
 
 .collection-card__link {
   font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .collection-card__image {
+    height: 260px;
+  }
+
+  .collection-card__content {
+    padding: 1.75rem;
+  }
+
+  .collection-card__content h3 {
+    font-size: 1.5rem;
+  }
+
+  .collection-card__content p {
+    font-size: .95rem;
+    line-height: 1.7;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .collection-card__image {
+    height: 220px;
+  }
+
+  .collection-card__content {
+    padding: 1.5rem;
+  }
+
+  .collection-card__content h3 {
+    margin-bottom: .75rem;
+
+    font-size: 1.35rem;
+  }
+
+  .collection-card__content p {
+    margin-bottom: 1.25rem;
+
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .collection-card__link {
+    font-size: .95rem;
+  }
+
 }

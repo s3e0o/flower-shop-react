@@ -154,3 +154,98 @@
     transform:translateY(0) scale(1);
   }
 }
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .gallery-lightbox {
+    width: min(95vw, 900px);
+  }
+
+  .gallery-lightbox img {
+    max-height: 75vh;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .gallery-lightbox-overlay {
+
+    padding: 1rem;
+
+  }
+
+  .gallery-lightbox {
+
+    width: 100%;
+
+  }
+
+  .gallery-lightbox img {
+
+    max-height: 60vh;
+
+    border-radius: 16px;
+
+  }
+
+  .gallery-lightbox__caption {
+
+    margin-top: 1rem;
+
+  }
+
+  .gallery-lightbox__caption span {
+
+    font-size: .7rem;
+
+  }
+
+  .gallery-lightbox__caption h3 {
+
+    font-size: 1.2rem;
+
+  }
+
+  .gallery-lightbox__close {
+
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.25rem;
+
+  }
+
+  .gallery-lightbox__nav {
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.5rem;
+
+  }
+
+  .gallery-lightbox__nav--left {
+
+    left: 10px;
+
+  }
+
+  .gallery-lightbox__nav--right {
+
+    right: 10px;
+
+  }
+
+}

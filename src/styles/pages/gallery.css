@@ -71,3 +71,76 @@
 .gallery-hero__image:hover img {
   transform: scale(1.03);
 }
+
+/* ==========================================
+   RESPONSIVE - GALLERY HERO
+========================================== */
+
+@media (max-width: 992px) {
+
+  .gallery-hero {
+    padding-top: 4rem;
+  }
+
+  .gallery-hero__content {
+    max-width: 680px;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-hero__content h1 {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+  }
+
+  .gallery-hero__content p:last-child {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .gallery-hero__image img {
+    height: 500px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .gallery-hero {
+    padding-top: 3rem;
+  }
+
+  .gallery-hero__content {
+    margin-bottom: 2rem;
+  }
+
+  .gallery-hero__eyebrow {
+    font-size: .72rem;
+    letter-spacing: .18em;
+  }
+
+  .gallery-hero__content h1 {
+    margin-bottom: 1rem;
+
+    font-size: clamp(2.2rem, 9vw, 3rem);
+
+    line-height: 1.1;
+  }
+
+  .gallery-hero__content p:last-child {
+    max-width: 100%;
+
+    font-size: .95rem;
+
+    line-height: 1.7;
+  }
+
+  .gallery-hero__image {
+    width: 100%;
+
+    border-radius: 20px;
+  }
+
+  .gallery-hero__image img {
+    height: 320px;
+  }
+
+}

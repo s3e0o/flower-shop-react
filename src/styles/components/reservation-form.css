@@ -69,3 +69,65 @@
 
   box-shadow: 0 0 0 3px rgba(142,122,99,.15);
 }
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .reservation-form {
+
+    padding: 2.5rem;
+
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .reservation-form {
+
+    padding: 1.5rem;
+
+    border-radius: 20px;
+
+  }
+
+  .reservation-form h2 {
+
+    margin-bottom: 1.5rem;
+
+    font-size: 1.8rem;
+
+  }
+
+  .form-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
+
+  }
+
+  .form-group:last-child {
+
+    margin-top: 0;
+
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+
+    padding: .9rem;
+
+    font-size: .95rem;
+
+  }
+
+}

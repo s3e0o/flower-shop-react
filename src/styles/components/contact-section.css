@@ -77,3 +77,87 @@
 
   box-shadow: var(--shadow-md);
 }
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .contact-section__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-section__map iframe {
+    height: 500px;
+  }
+
+  .contact-section__content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .contact-section__content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .contact-section__grid {
+    gap: 2.5rem;
+  }
+
+  .contact-section__map iframe {
+    height: 320px;
+
+    border-radius: 20px;
+  }
+
+  .contact-section__content {
+    text-align: center;
+  }
+
+  .contact-section__content h2 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-item {
+    justify-content: center;
+
+    text-align: left;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-item svg {
+    margin-top: .2rem;
+  }
+
+  .contact-item p,
+  .contact-item span {
+    font-size: .95rem;
+
+    line-height: 1.7;
+  }
+
+  .contact-socials {
+    justify-content: center;
+
+    margin-top: 2rem;
+  }
+
+  .contact-socials a {
+    width: 44px;
+    height: 44px;
+  }
+
+}

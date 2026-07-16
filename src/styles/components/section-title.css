@@ -48,3 +48,58 @@
 .section-title--left .section-title__description {
   margin: 0;
 }
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .section-title {
+    max-width: 650px;
+    margin-bottom: 3rem;
+  }
+
+  .section-title__heading {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+  }
+
+  .section-title__description {
+    max-width: 560px;
+
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title__eyebrow {
+    font-size: .72rem;
+    letter-spacing: .18em;
+  }
+
+  .section-title__heading {
+    margin-bottom: 1rem;
+
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.15;
+  }
+
+  .section-title__description {
+    max-width: 100%;
+
+    font-size: .95rem;
+    line-height: 1.7;
+  }
+
+}

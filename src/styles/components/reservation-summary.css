@@ -93,3 +93,110 @@
 
   align-items: center;
 }
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .reservation-hero {
+    max-width: 680px;
+
+    margin-bottom: 3rem;
+  }
+
+  .reservation-hero h1 {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+  }
+
+  .reservation-summary {
+
+    grid-template-columns: 300px 1fr;
+
+    gap: 2rem;
+
+    padding: 1.75rem;
+  }
+
+  .reservation-summary img {
+
+    height: 360px;
+
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .reservation-hero {
+
+    margin-bottom: 2rem;
+
+  }
+
+  .reservation-hero__eyebrow {
+
+    font-size: .72rem;
+
+    letter-spacing: .18em;
+
+  }
+
+  .reservation-hero h1 {
+
+    margin-bottom: 1rem;
+
+    font-size: clamp(2.2rem, 9vw, 3rem);
+
+    line-height: 1.1;
+
+  }
+
+  .reservation-hero p {
+
+    font-size: .95rem;
+
+    line-height: 1.7;
+
+  }
+
+  .reservation-summary {
+
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+
+    margin-bottom: 3rem;
+
+    text-align: center;
+
+  }
+
+  .reservation-summary img {
+
+    height: 300px;
+
+  }
+
+  .reservation-summary h2 {
+
+    margin: .75rem 0;
+
+  }
+
+  .reservation-summary p {
+
+    margin-bottom: 1.5rem;
+
+    line-height: 1.7;
+
+  }
+
+}

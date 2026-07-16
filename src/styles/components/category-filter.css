@@ -1,43 +1,37 @@
 /* ==========================================
-   CATEGORY FILTER
+   CATEGORY FILTER WRAPPER
 ========================================== */
 
-.category-filter {
+.category-filter-wrapper {
+  margin: 0 auto 4rem;
+  width: fit-content;
+}
+
+/* ==========================================
+   DESKTOP/TABLET VIEW (Grid)
+========================================== */
+
+.category-filter-desktop {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: .5rem;
-
-  width: fit-content;
-
-  margin: 0 auto 4rem;
-
+  
   padding: .5rem;
-
   background: #ffffff;
-
   border-radius: 999px;
-
   box-shadow: 0 12px 30px rgba(0,0,0,.06);
 }
 
 .category-filter__button {
   padding: .8rem 1.5rem;
-
   border: none;
   outline: none;
-
   background: transparent;
-
   border-radius: 999px;
-
   cursor: pointer;
-
   font-size: .95rem;
-
   font-weight: 600;
-
   transition: all .3s ease;
 }
 
@@ -48,4 +42,98 @@
 .category-filter__button--active {
   background: var(--color-primary);
   color: white;
+}
+
+/* ==========================================
+   MOBILE VIEW (Stepper)
+========================================== */
+
+.category-filter-mobile {
+  display: none; /* Hidden by default */
+  
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  max-width: 300px; /* Neat pill size on mobile */
+  margin: 0 auto;
+  
+  padding: 0.4rem 0.75rem;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  gap: 1rem;
+}
+
+/* Mobile Arrows */
+.category-filter__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  line-height: 1;
+  
+  transition: all 0.25s ease;
+}
+
+.category-filter__arrow:hover {
+  background: #f5f2ed;
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+/* Mobile Label */
+.category-filter__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  
+  text-align: center;
+  flex: 1;
+  min-width: 80px; /* Prevents jumping */
+  white-space: nowrap;
+}
+
+/* ==========================================
+   RESPONSIVE SWITCHING
+========================================== */
+
+/* On Tablet/Desktop: Show Grid, Hide Stepper */
+@media (min-width: 769px) {
+  .category-filter-mobile {
+    display: none;
+  }
+  .category-filter-desktop {
+    display: flex;
+  }
+}
+
+/* On Mobile: Hide Grid, Show Stepper */
+@media (max-width: 768px) {
+  .category-filter-desktop {
+    display: none;
+  }
+  .category-filter-mobile {
+    display: flex;
+  }
+  
+  /* Adjust wrapper margin for mobile */
+  .category-filter-wrapper {
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 0 1rem; /* Add side padding so it doesn't touch edges */
+    box-sizing: border-box;
+  }
 }

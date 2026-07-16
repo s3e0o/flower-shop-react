@@ -87,3 +87,35 @@
     columns: 1;
   }
 }
+
+/* ==========================================
+   RESPONSIVE - GALLERY ITEM
+========================================== */
+
+@media (max-width: 768px) {
+
+  .gallery-item {
+    border-radius: 16px;
+  }
+
+  .gallery-item__overlay {
+    padding: 1.25rem;
+
+    opacity: 1;
+
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.05)
+    );
+  }
+
+  .gallery-item__overlay span {
+    font-size: .7rem;
+  }
+
+  .gallery-item__overlay h3 {
+    font-size: 1.1rem;
+  }
+
+}

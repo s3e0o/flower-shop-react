@@ -359,3 +359,154 @@
   background: white;
   color: var(--color-primary);
 }
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  /* HERO */
+
+  .hero {
+    padding: 5.5rem 0;
+  }
+
+  .hero__content {
+    margin-bottom: 3rem;
+  }
+
+  .hero__title {
+    font-size: clamp(3.2rem, 8vw, 5rem);
+  }
+
+  .hero__description {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+
+  .hero__image-wrapper {
+    height: 500px;
+  }
+
+  /* FEATURED COLLECTION */
+
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ABOUT */
+
+  .about-preview__grid {
+    gap: 3rem;
+  }
+
+  .about-preview__image img {
+    height: 500px;
+  }
+
+  /* GALLERY */
+
+  .gallery-preview__grid {
+    columns: 2;
+  }
+
+  /* VISIT */
+
+  .visit-preview__grid {
+    gap: 3rem;
+  }
+
+  .visit-preview__map {
+    height: 420px;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 11vw, 3.8rem);
+    line-height: 1.05;
+  }
+
+  .hero__description {
+    margin-top: 1.5rem;
+
+    font-size: .98rem;
+    line-height: 1.7;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__image-wrapper {
+    height: 340px;
+  }
+
+  /* FEATURED COLLECTION */
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT */
+
+  .about-preview__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-preview__image {
+    order: -1;
+  }
+
+  .about-preview__image img {
+    height: 360px;
+  }
+
+  .about-preview__content h2 {
+    font-size: 2.4rem;
+  }
+
+  /* GALLERY */
+
+  .gallery-preview__grid {
+    columns: 1;
+  }
+
+  /* VISIT */
+
+  .visit-preview__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .visit-preview__map {
+    height: 320px;
+  }
+
+  /* CTA */
+
+  .homepage-cta__title {
+    font-size: 2.5rem;
+  }
+
+  .homepage-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+}

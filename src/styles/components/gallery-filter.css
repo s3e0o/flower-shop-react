@@ -1,40 +1,132 @@
 /* ==========================================
-   GALLERY FILTER
+   GALLERY FILTER WRAPPER
 ========================================== */
 
-.gallery-filter {
+.gallery-filter-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+/* ==========================================
+   DESKTOP/TABLET VIEW (Grid)
+========================================== */
+
+.gallery-filter-desktop {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   gap: .75rem;
-
-  margin: 4rem 0;
 }
 
 .gallery-filter__button {
   padding: .85rem 1.5rem;
-
   border: none;
-
   border-radius: 999px;
-
   background: white;
-
   cursor: pointer;
-
   font-weight: 600;
-
   transition: all .3s ease;
-
   box-shadow: var(--shadow-sm);
 }
 
 .gallery-filter__button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .gallery-filter__button--active {
   background: var(--color-primary);
   color: white;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   MOBILE VIEW (Stepper)
+========================================== */
+
+.gallery-filter-mobile {
+  display: none; /* Hidden by default */
+  
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  max-width: 300px;
+  
+  padding: 0.4rem 0.75rem;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  gap: 1rem;
+}
+
+/* Mobile Arrows */
+.gallery-filter__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  line-height: 1;
+  
+  transition: all 0.25s ease;
+}
+
+.gallery-filter__arrow:hover {
+  background: #f5f2ed;
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+/* Mobile Label */
+.gallery-filter__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  
+  text-align: center;
+  flex: 1;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   RESPONSIVE SWITCHING
+========================================== */
+
+/* On Tablet/Desktop: Show Grid, Hide Stepper */
+@media (min-width: 769px) {
+  .gallery-filter-mobile {
+    display: none;
+  }
+  .gallery-filter-desktop {
+    display: flex;
+  }
+}
+
+/* On Mobile: Hide Grid, Show Stepper */
+@media (max-width: 768px) {
+  .gallery-filter-desktop {
+    display: none;
+  }
+  .gallery-filter-mobile {
+    display: flex;
+  }
+  
+  .gallery-filter-wrapper {
+    margin: 3rem 0;
+    width: 100%;
+  }
 }

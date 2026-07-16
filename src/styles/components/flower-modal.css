@@ -1,3 +1,7 @@
+/* ==========================================
+   FLOWER MODAL
+========================================== */
+
 .flower-modal-overlay {
   position: fixed;
   inset: 0;
@@ -6,48 +10,112 @@
   justify-content: center;
   align-items: center;
 
-  background: rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+
+  background: rgba(0, 0, 0, .45);
   backdrop-filter: blur(6px);
 
   z-index: 5000;
 
-  animation: fadeOverlay 0.3s ease forwards;
+  overflow-y: auto;
+
+  animation: fadeOverlay .3s ease forwards;
 }
 
 .flower-modal {
+  position: relative;
+
   width: min(1100px, 92vw);
+
+  padding: 2rem;
 
   background: white;
 
   border-radius: 24px;
 
-  padding: 2rem;
-
-  position: relative;
-
-  animation: modalPop 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: modalPop .35s cubic-bezier(.22,1,.36,1) forwards;
 }
 
-.flower-modal__grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:3rem;
-    align-items:center;
+.flower-modal__grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3rem;
+
+  align-items: center;
 }
 
-.flower-modal img{
-    width:100%;
-    height:600px;
-    object-fit:cover;
-    border-radius:18px;
+.flower-modal img {
+  width: 100%;
+
+  height: 600px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  animation: imageReveal .45s ease forwards;
 }
 
-.flower-modal__close{
-    position:absolute;
-    top:20px;
-    right:20px;
+.flower-modal__content {
+  display: flex;
 
-    font-size:2rem;
+  flex-direction: column;
+}
+
+.flower-modal__title {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.flower-modal__description {
+  line-height: 1.8;
+
+  color: var(--color-text-light);
+}
+
+.flower-modal__price {
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+
+  font-size: 2rem;
+}
+
+.flower-modal__close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.95);
+
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+
+  transition: .3s;
+
+  z-index: 100;
+}
+
+.flower-modal__close:hover {
+  transform: rotate(90deg);
+
+  background: white;
 }
 
 /* ==========================================
@@ -55,6 +123,7 @@
 ========================================== */
 
 @keyframes fadeOverlay {
+
   from {
     opacity: 0;
   }
@@ -62,37 +131,118 @@
   to {
     opacity: 1;
   }
+
 }
 
 @keyframes modalPop {
+
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.97);
+
+    transform: translateY(20px) scale(.97);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0) scale(1);
   }
-}
 
-.flower-modal img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 18px;
-
-  animation: imageReveal 0.45s ease forwards;
 }
 
 @keyframes imageReveal {
+
   from {
     opacity: 0;
+
     transform: scale(1.05);
   }
 
   to {
     opacity: 1;
+
     transform: scale(1);
   }
+
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .flower-modal {
+    width: min(92vw, 900px);
+
+    padding: 1.75rem;
+  }
+
+  .flower-modal__grid {
+    gap: 2rem;
+  }
+
+  .flower-modal img {
+    height: 420px;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .flower-modal-overlay {
+    align-items: flex-start;
+  }
+
+  .flower-modal {
+    width: 100%;
+
+    margin: 2rem auto;
+
+    padding: 1.25rem;
+  }
+
+  .flower-modal__grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+  .flower-modal img {
+    height: 280px;
+  }
+
+  .flower-modal__title {
+    margin-top: .5rem;
+
+    font-size: 2rem;
+  }
+
+  .flower-modal__description {
+    font-size: .95rem;
+
+    line-height: 1.7;
+  }
+
+  .flower-modal__price {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    font-size: 1.6rem;
+  }
+
+  .flower-modal__close {
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.25rem;
+  }
+
 }

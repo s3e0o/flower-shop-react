@@ -1,80 +1,90 @@
 import { useEffect } from "react";
+
 import Button from "../ui/Button";
 
 export default function FlowerModal({
-    flower,
-    onClose,
+  flower,
+  onClose,
 }) {
-    useEffect(() => {
-        if (!flower) return;
+  useEffect(() => {
+    if (!flower) return;
 
-        const previousOverflow = document.body.style.overflow;
+    const previousOverflow = document.body.style.overflow;
 
-        document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
 
-        return () => {
-            document.body.style.overflow = previousOverflow;
-        };
-    }, [flower]);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [flower]);
 
-    useEffect(() => {
-        function handleKeyDown(event) {
-            if (event.key === "Escape") {
-                onClose();
-            }
-        }
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    }
 
-        window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-        };
-    }, [onClose]);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
 
-    if (!flower) return null;
+  if (!flower) return null;
 
-    return (
-        <div
-            className="flower-modal-overlay"
-            onClick={onClose}
+  return (
+    <div
+      className="flower-modal-overlay"
+      onClick={onClose}
+    >
+      <div
+        className="flower-modal"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          className="flower-modal__close"
+          onClick={onClose}
+          aria-label="Close"
         >
-            <div
-                className="flower-modal"
-                onClick={(e) => e.stopPropagation()}
-            >
-                <button
-                    className="flower-modal__close"
-                    onClick={onClose}
-                >
-                    ✕
-                </button>
+          ✕
+        </button>
 
-                <div className="flower-modal__grid">
-                    <img
-                        src={flower.image}
-                        alt={flower.name}
-                    />
+        <div className="flower-modal__grid">
 
-                    <div>
-                        <span className="flower-card__category">
-                            {flower.category}
-                        </span>
+          <img
+            src={flower.image}
+            alt={flower.name}
+          />
 
-                        <h2>{flower.name}</h2>
+          <div className="flower-modal__content">
 
-                        <p>{flower.description}</p>
+            <span className="flower-card__category">
+              {flower.category}
+            </span>
 
-                        <h3>₱{flower.price.toLocaleString()}</h3>
+            <h2 className="flower-modal__title">
+              {flower.name}
+            </h2>
 
-                        <Button
-                            to="/reservation"
-                            state={{ flower }}
-                        >
-                            Reserve Arrangement
-                        </Button>
-                    </div>
-                </div>
-            </div>
+            <p className="flower-modal__description">
+              {flower.description}
+            </p>
+
+            <h3 className="flower-modal__price">
+              ₱{flower.price.toLocaleString()}
+            </h3>
+
+            <Button to="/reservation">
+              Reserve Arrangement
+            </Button>
+
+          </div>
+
         </div>
-    );
+
+      </div>
+    </div>
+  );
 }

@@ -67,7 +67,7 @@ const footer = {
   },
 
   copyright:
-    "© 2026 KP Patlat Floral Boutique. All Rights Reserved.",
+    "© 2026 Patlat AlKuwait Floral Boutique. All Rights Reserved.",
 
   developer:
     "Designed & Developed by Seo",
