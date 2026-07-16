@@ -130,3 +130,47 @@
 
   transform: translateX(5px);
 }
+
+/* ==========================================
+   FLOWER BADGE
+========================================== */
+
+.flower-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+
+  margin-bottom: .85rem;
+
+  padding: .45rem .9rem;
+
+  border-radius: 999px;
+
+  background: rgba(142, 122, 99, 0.12);
+
+  color: var(--color-primary);
+
+  font-size: .75rem;
+
+  font-weight: 600;
+
+  letter-spacing: .06em;
+
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   FLOWER TAGLINE
+========================================== */
+
+.flower-card__tagline {
+  margin-bottom: .75rem;
+
+  color: var(--color-accent);
+
+  font-size: .9rem;
+
+  font-style: italic;
+
+  line-height: 1.6;
+}

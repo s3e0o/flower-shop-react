@@ -2,6 +2,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 export default function FlowerCard({
   flower,
+  badge,
   onView,
 }) {
   return (
@@ -19,6 +20,12 @@ export default function FlowerCard({
 
       <div className="flower-card__content">
 
+        {badge && (
+          <span className="flower-card__badge">
+            🌸 {badge}
+          </span>
+        )}
+
         <span
           className={`flower-card__category flower-card__category--${flower.category
             .toLowerCase()
@@ -30,6 +37,12 @@ export default function FlowerCard({
         <h3 className="flower-card__title">
           {flower.name}
         </h3>
+
+        {flower.tagline && (
+          <p className="flower-card__tagline">
+            {flower.tagline}
+          </p>
+        )}
 
         <p className="flower-card__description">
           {flower.description}
@@ -43,7 +56,6 @@ export default function FlowerCard({
 
           <span className="flower-card__link">
             Reserve Arrangement
-
             <FiArrowRight />
           </span>
 
